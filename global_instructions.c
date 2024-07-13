@@ -6,27 +6,11 @@
 /*   By: nijer <nijer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 23:35:01 by nijer             #+#    #+#             */
-/*   Updated: 2024/07/04 19:37:22 by nijer            ###   ########.fr       */
+/*   Updated: 2024/07/13 20:50:12 by nijer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-t_node	*lstlast(t_node *head)
-{
-	t_node	*tmp;
-
-	tmp = head;
-	while (tmp)
-	{
-        if(tmp->next)
-		    tmp = tmp->next;
-		if (tmp->next == NULL)
-			return (tmp);
-	}
-	return (tmp);
-}
-
 t_node *push(int index,int num, t_node **stack_head)
 {
     t_node *new_node = (t_node *)malloc(sizeof(t_node));
