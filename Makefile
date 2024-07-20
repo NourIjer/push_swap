@@ -10,18 +10,18 @@ SRCS := push_swap.c\
 
 OBJS := $(SRCS:.c=.o)
 
-TARGET := push_swap
+NAME := push_swap
 
-all: $(TARGET)
+all: $(NAME)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
-$(TARGET): $(OBJS)
+$(NAME): $(OBJS)
 	$(CC) $(CFLAGS) $^ -o $@
 
 clean:
-	rm -f $(OBJS) $(TARGET)
+	rm -f $(OBJS) $(NAME)
 fclean:
 	rm -f $(OBJS)
 re: fclean all
