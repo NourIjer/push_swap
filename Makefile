@@ -1,18 +1,18 @@
 CC := cc
 
-CFLAGS := -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror
 
-SRCS := push_swap.c\
+SRCS = push_swap.c\
 		parse.c\
 		global_instructions.c common_instructions.c a_instructions.c b_instructions.c\
 		algo_functions.c sort_small.c push_to_stack.c\
 		utils.c\
 
-OBJS := $(SRCS:.c=.o)
+OBJS = $(SRCS:.c=.o)
 
-HEADERS := push_swap.h
+HEADERS = push_swap.h
 
-NAME := push_swap
+NAME = push_swap
 
 all: $(NAME)
 
