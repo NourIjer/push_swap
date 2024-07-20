@@ -89,11 +89,8 @@ int	main(int argc, char **argv)
 			i++;
 		}
 		update_indices(stack_a);
-		if (is_sorted(stack_a))
-		{
-			free_stack(&stack_a);
-			return (0);
-		}
-		sort_stack(&stack_a, &stack_b);
+		if (!is_sorted(stack_a))
+			sort_stack(&stack_a, &stack_b);
+		free_stack(&stack_a);
 	}
 }

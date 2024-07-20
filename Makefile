@@ -1,4 +1,4 @@
-CC := gcc
+CC := cc
 
 CFLAGS := -Wall -Wextra -Werror
 
@@ -10,20 +10,24 @@ SRCS := push_swap.c\
 
 OBJS := $(SRCS:.c=.o)
 
+HEADERS := push_swap.h
+
 NAME := push_swap
 
 all: $(NAME)
 
-%.o: %.c
+%.o: %.c $(HEADERS)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
 	$(CC) $(CFLAGS) $^ -o $@
 
 clean:
-	rm -f $(OBJS) $(NAME)
-fclean:
 	rm -f $(OBJS)
+
+fclean:
+	rm -f $(OBJS) $(NAME)
+
 re: fclean all
 
-.PHONY: all clean
+.PHONY: clean fclean
